@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2449c8">
+  <meta name="description" content="Three everyday reasons school uniforms can make the school day easier." />
+  <title>Why School Uniforms Make Sense</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17294b;
+      --blue: #2449c8;
+      --blue-deep: #193690;
+      --paper: #f7f8fc;
+      --white: #ffffff;
+      --yellow: #ffd65a;
+      --sky: #e6edff;
+      --line: #d8deeb;
+      --body-font: Arial, Helvetica, sans-serif;
+      --display-font: "Arial Rounded MT Bold", "Trebuchet MS", Arial, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 17px/1.6 var(--body-font);
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
+    .skip-link {
+      position: absolute; z-index: 5; left: 1rem; top: -5rem;
+      padding: .65rem 1rem; border-radius: 4px; background: var(--white); color: var(--ink);
+    }
+    .skip-link:focus { top: 1rem; }
+    .wrap { width: min(1140px, calc(100% - 48px)); margin-inline: auto; }
+
+    .topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+    .brand { display: inline-flex; align-items: center; gap: .7rem; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+    .brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50% 50% 50% 8px; background: var(--yellow); transform: rotate(-8deg); }
+    .brand-mark svg { width: 17px; height: 17px; transform: rotate(8deg); }
+    .topnav { display: flex; align-items: center; gap: 1.8rem; font-size: .91rem; font-weight: 700; }
+    .topnav a { text-decoration: none; }
+    .topnav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+    .hero {
+      position: relative; overflow: hidden; min-height: 530px; display: grid;
+      grid-template-columns: 1.06fr .94fr; align-items: center; gap: 2rem;
+      padding: clamp(42px, 7vw, 88px); border-radius: 12px 12px 100px 12px;
+      background: var(--blue); color: var(--white); isolation: isolate;
+    }
+    .hero::before {
+      content: ""; position: absolute; z-index: -1; width: 540px; height: 540px;
+      top: -300px; left: -265px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 50%;
+      box-shadow: 0 0 0 34px rgb(255 255 255 / 5%), 0 0 0 69px rgb(255 255 255 / 4%);
+    }
+    .hero-copy { max-width: 620px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 22px; font-size: .85rem; font-weight: 700; }
+    .eyebrow::before { content: ""; width: 25px; height: 3px; background: var(--yellow); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--display-font); }
+    h1 { max-width: 660px; margin-bottom: 22px; font-size: clamp(3rem, 6.5vw, 5.5rem); line-height: .99; letter-spacing: -.065em; }
+    .hero-copy > p:not(.eyebrow) { max-width: 500px; margin-bottom: 30px; color: #e4eaff; font-size: 1.13rem; }
+    .hero-link { display: inline-flex; align-items: center; min-height: 48px; padding: 0 18px; border-radius: 4px; background: var(--yellow); color: var(--ink); font-weight: 800; text-decoration: none; }
+    .hero-link:hover { background: #ffe28a; }
+    .hero-art { position: relative; display: grid; min-height: 340px; place-items: center; }
+    .art-sun { position: absolute; width: min(33vw, 350px); aspect-ratio: 1; border-radius: 50%; background: var(--yellow); }
+    .uniform-svg { position: relative; width: min(100%, 380px); filter: drop-shadow(0 20px 16px rgb(19 34 83 / 18%)); }
+    .art-note { position: absolute; right: 0; bottom: 5%; padding: 10px 16px; background: var(--white); color: var(--blue-deep); font-size: .83rem; font-weight: 800; transform: rotate(3deg); box-shadow: 4px 5px 0 rgb(23 41 75 / 16%); }
+
+    .intro { padding: 112px 0 55px; text-align: center; }
+    .intro h2 { max-width: 700px; margin: 0 auto 16px; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.08; letter-spacing: -.05em; }
+    .intro p { max-width: 580px; margin: 0 auto; color: #53627b; }
+
+    .reasons { display: grid; grid-template-columns: .78fr 1.22fr; align-items: start; gap: clamp(36px, 7vw, 105px); padding: 38px 0 102px; }
+    .reason-aside { position: sticky; top: 32px; padding: 30px; border-radius: 4px 34px 4px 4px; background: var(--yellow); }
+    .reason-aside svg { display: block; width: 42px; height: 42px; margin-bottom: 36px; }
+    .reason-aside h3 { max-width: 280px; margin-bottom: 12px; font-size: 1.65rem; line-height: 1.14; letter-spacing: -.04em; }
+    .reason-aside p { margin-bottom: 0; font-size: .97rem; }
+    .reason-list { list-style: none; padding: 0; margin: 0; }
+    .reason-list li { display: grid; grid-template-columns: 62px 1fr; gap: 20px; padding: 27px 0 30px; border-top: 1px solid var(--line); }
+    .reason-list li:last-child { border-bottom: 1px solid var(--line); }
+    .reason-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; background: var(--sky); color: var(--blue); }
+    .reason-icon svg { width: 27px; height: 27px; }
+    .reason-list h3 { margin: 0 0 7px; font-size: 1.38rem; line-height: 1.2; letter-spacing: -.035em; }
+    .reason-list p { max-width: 540px; margin: 0; color: #53627b; font-size: .98rem; }
+
+    .fairness { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; margin-bottom: 42px; padding: clamp(26px, 5vw, 48px); border-left: 6px solid var(--blue); background: var(--white); }
+    .fairness h2 { max-width: 620px; margin: 0 0 9px; font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.1; letter-spacing: -.045em; }
+    .fairness p { max-width: 640px; margin: 0; color: #53627b; }
+    .fairness-stamp { display: grid; width: 94px; aspect-ratio: 1; place-items: center; border: 2px solid var(--yellow); border-radius: 50%; color: var(--blue); font-size: .77rem; font-weight: 800; line-height: 1.1; text-align: center; transform: rotate(9deg); }
+
+    .closing { padding: 55px 0 58px; background: var(--ink); color: var(--white); }
+    .closing-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+    .closing h2 { max-width: 680px; margin: 0; font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.05; letter-spacing: -.055em; }
+    .closing-mark { flex: 0 0 auto; width: 76px; height: 76px; display: grid; place-items: center; border-radius: 50%; background: var(--yellow); color: var(--ink); }
+    .closing-mark svg { width: 33px; height: 33px; }
+    footer { padding: 22px 0; background: var(--ink); color: #c3cbe0; font-size: .84rem; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgb(255 255 255 / 17%); padding-top: 20px; }
+    footer p { margin: 0; }
+
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, 600px); }
+      .topbar { height: 70px; }
+      .topnav { gap: .9rem; font-size: .82rem; }
+      .topnav a:first-child { display: none; }
+      .hero { min-height: 0; grid-template-columns: 1fr; gap: 18px; padding: 42px 28px 24px; border-bottom-right-radius: 65px; }
+      h1 { max-width: 520px; font-size: clamp(3.1rem, 12vw, 5rem); }
+      .hero-art { min-height: 245px; margin-top: -5px; }
+      .art-sun { width: 230px; }
+      .uniform-svg { width: 280px; }
+      .art-note { right: 2%; bottom: 2%; }
+      .intro { padding: 76px 0 38px; text-align: left; }
+      .intro h2, .intro p { margin-left: 0; }
+      .reasons { grid-template-columns: 1fr; gap: 32px; padding: 20px 0 70px; }
+      .reason-aside { position: static; display: grid; grid-template-columns: 44px 1fr; column-gap: 20px; padding: 22px; }
+      .reason-aside svg { grid-row: span 2; width: 38px; height: 38px; margin: 0; }
+      .reason-aside h3 { max-width: none; margin-bottom: 5px; font-size: 1.35rem; }
+      .reason-aside p { grid-column: 2; font-size: .9rem; }
+      .reason-list li { grid-template-columns: 48px 1fr; gap: 15px; padding: 22px 0; }
+      .reason-icon { width: 44px; height: 44px; }
+      .reason-icon svg { width: 23px; height: 23px; }
+      .fairness { grid-template-columns: 1fr; margin-bottom: 28px; padding: 24px; }
+      .fairness-stamp { width: 72px; }
+      .closing-inner { align-items: flex-start; }
+      .closing-mark { width: 55px; height: 55px; }
+      .closing-mark svg { width: 25px; }
+      footer .wrap { flex-direction: column; }
+    }
+    @media (max-width: 390px) {
+      body { font-size: 16px; }
+      .brand { font-size: .9rem; }
+      .topnav { gap: .7rem; font-size: .77rem; }
+      .hero { padding-inline: 22px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="wrap topbar">
+    <a class="brand" href="#top" aria-label="The case for school uniforms, home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="m6 17 5-10 2.5 5L16 8l3 9" stroke="#17294b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span>The case for uniforms</span>
+    </a>
+    <nav class="topnav" aria-label="Page navigation">
+      <a href="#reasons">The reasons</a>
+      <a href="#fair-for-everyone">Make it fair</a>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A simple case for school uniforms</p>
+        <h1 id="hero-title">Less outfit pressure. More room to learn.</h1>
+        <p>School is for trying new things, finding your people, and learning something every day. A shared uniform can make the start of that day a little easier.</p>
+        <a class="hero-link" href="#reasons">See why uniforms help</a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-sun"></div>
+        <svg class="uniform-svg" viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M143 74c11-27 32-43 57-43s46 16 57 43" stroke="#17294b" stroke-width="10" stroke-linecap="round"/>
+          <path d="M200 31c-10 0-17-7-17-15 0-6 5-11 11-11h12c6 0 11 5 11 11 0 8-7 15-17 15Z" fill="#fff" stroke="#17294b" stroke-width="6"/>
+          <path d="m141 75-72 36-33 94 53 20 23-52v140c0 12 10 22 22 22h132c12 0 22-10 22-22V173l23 52 53-20-33-94-72-36c-7 32-28 51-58 51s-51-19-58-51Z" fill="#fff" stroke="#17294b" stroke-width="9" stroke-linejoin="round"/>
+          <path d="m142 77 38 32-29 30-29-49 20-13ZM258 77l-38 32 29 30 29-49-20-13Z" fill="#dfe8ff" stroke="#17294b" stroke-width="6" stroke-linejoin="round"/>
+          <path d="m184 108 16 20 16-20-16-12-16 12Z" fill="#2449c8" stroke="#17294b" stroke-width="5" stroke-linejoin="round"/>
+          <path d="m200 128-14 29 14 143 14-143-14-29Z" fill="#2449c8" stroke="#17294b" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M234 190h34v36h-34c-6 0-11-5-11-11v-14c0-6 5-11 11-11Z" fill="#dfe8ff" stroke="#17294b" stroke-width="5"/>
+          <path d="M239 201h19" stroke="#2449c8" stroke-width="4" stroke-linecap="round"/>
+          <path d="M177 228h-48" stroke="#dfe8ff" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="200" cy="181" r="4" fill="#ffd65a"/>
+          <circle cx="200" cy="206" r="4" fill="#ffd65a"/>
+          <circle cx="200" cy="231" r="4" fill="#ffd65a"/>
+        </svg>
+        <span class="art-note">Ready for the day</span>
+      </div>
+    </section>
+
+    <section class="intro" id="reasons" aria-labelledby="reasons-title">
+      <h2 id="reasons-title">A small change can make the school day feel simpler.</h2>
+      <p>Uniforms don't do the learning for us. They can clear away a few everyday distractions so students can focus on what matters.</p>
+    </section>
+
+    <section class="reasons" aria-label="Reasons school uniforms can help">
+      <aside class="reason-aside">
+        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 4v8M24 36v8M4 24h8m24 0h8M9.9 9.9l5.7 5.7m16.8 16.8 5.7 5.7m0-28.2-5.7 5.7m-16.8 16.8-5.7 5.7" stroke="#17294b" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="10" fill="#fff" stroke="#17294b" stroke-width="3"/><path d="m20 24 3 3 6-7" stroke="#2449c8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>More energy for the school day.</h3>
+        <p>Keep the focus on ideas, friendships, and the things students do.</p>
+      </aside>
+      <ul class="reason-list">
+        <li>
+          <span class="reason-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h3>Make mornings easier</h3><p>One less outfit decision can mean a calmer start and less time wondering what to wear.</p></div>
+        </li>
+        <li>
+          <span class="reason-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M20 13 13 20l-9-9V4h7l9 9Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="8" cy="8" r="1.4" fill="currentColor"/></svg></span>
+          <div><h3>Turn down clothing pressure</h3><p>When classmates share a basic look, brands and trends can matter less in the classroom.</p></div>
+        </li>
+        <li>
+          <span class="reason-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3" stroke="currentColor" stroke-width="2"/><path d="M3.5 20v-1a5.5 5.5 0 0 1 11 0v1m2-15a3 3 0 0 1 0 6m1 3a5 5 0 0 1 3 4.6v.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <div><h3>Show we're in it together</h3><p>A shared uniform is a visible reminder that everyone belongs to the same school community.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fairness" id="fair-for-everyone" aria-labelledby="fairness-title">
+      <div>
+        <h2 id="fairness-title">Uniforms work best when everyone can wear them.</h2>
+        <p>Comfort matters. So does cost. Schools should offer practical, affordable options that work for every student.</p>
+      </div>
+      <div class="fairness-stamp" aria-hidden="true">COMFORT<br>+ CHOICE</div>
+    </section>
+  </main>
+
+  <section class="closing" aria-label="Conclusion">
+    <div class="wrap closing-inner">
+      <h2>A shared starting point. A school day that's yours to make.</h2>
+      <span class="closing-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="m7 17 6 6L26 9" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap"><p>Why school uniforms make sense</p><p>Start together. Learn your own way.</p></div>
+  </footer>
+</body>
+</html>
